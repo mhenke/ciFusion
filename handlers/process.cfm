@@ -8,11 +8,11 @@
 
 <cfif NOT isDefined("cookie.location")>
 <!--- TODO: Allow user to browse to file or directory to check --->
-<!---><cfcookie name="location">
+<cfcookie name="location">
 
 <cfparam name="cookie.location" default="C:\JRun4\servers\funstuff\cfusion.ear\cfusion.war\cfspec" />
 
-<cfset cookie.location = CreateObject("java","java.io.File").init(location).getCanonicalPath() />--->
+<cfset cookie.location = CreateObject("java","java.io.File").init(location).getCanonicalPath() />
 </cfif>
 
 <cfset objRequest = GetPageContext().GetRequest() />
